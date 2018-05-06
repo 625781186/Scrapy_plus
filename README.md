@@ -6,11 +6,10 @@
 > python setup.py install
 
 ### 2.文件说明
-requirements.txt：
-依赖环境所支持的模块及其版本
+requirements.txt:依赖环境所支持的模块及其版本
 
-setup.py：
-将框架安装到python中，作为第三方模块来调用
+setup.py:将框架安装到python中，作为第三方模块来调用
 
-VERSION.txt：
-标明当前的版本号
+VERSION.txt:标明当前的版本号
+
+scrapy_plus:主要功能实现
