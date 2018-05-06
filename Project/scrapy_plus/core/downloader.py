@@ -2,6 +2,7 @@
 
 import requests
 from scrapy_plus.http.response import Response
+from scrapy_plus.utils.log import logger
 
 class Downloader(object):
 
@@ -23,9 +24,13 @@ class Downloader(object):
         else:
             raise Exception("ERROR : 不支持该请求方法")
 
+        logger.info(u"[{}] <{}>".format(res.status_code, res.url))
         return Response(
             res.url,
             res.status_code,
             res.headers,
-            res.content
+            res.content,
+            meta = request.meta,
+            request = request
         )
+
